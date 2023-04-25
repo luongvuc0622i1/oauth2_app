@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1dec087b-aa4d-400c-afd3-e8950ff6b4bc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../demo-oauth2/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_2_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-oauth2/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-oauth2/.idea/libraries/Maven__javax_mail_mail_1_4_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-oauth2/.idea/libraries/Maven__org_eclipse_angus_angus_activation_1_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-oauth2/.idea/libraries/Maven__org_eclipse_angus_jakarta_mail_1_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-oauth2/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_mail_3_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-oauth2/.idea/libraries/Maven__org_springframework_spring_context_support_5_1_10_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-oauth2/src/main/java/com/example/demooauth2/controller/server/MailController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-oauth2/src/main/java/com/example/demooauth2/model/Email.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-oauth2/src/main/java/com/example/demooauth2/service/MailSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo-oauth2/src/main/java/com/example/demooauth2/service/impl/MailSenderImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-oauth2/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-oauth2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-oauth2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-oauth2/demo-oauth2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/demo-oauth2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-oauth2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-oauth2/src/main/java/com/example/demooauth2/config/ResourceServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/src/main/java/com/example/demooauth2/config/ResourceServerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-oauth2/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-oauth2/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/DemoOauth2Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/DemoOauth2Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/config/AuthorizationServerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/config/AuthorizationServerConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/config/MyAuthenticationHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/config/MyAuthenticationHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/config/ResourceServerConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/config/ResourceServerConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/config/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/controller/server/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/controller/server/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/controller/server/oauth2/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/controller/server/oauth2/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/controller/server/oauth2/OAuth2Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/controller/server/oauth2/OAuth2Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/model/AccessToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/model/AccessToken.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/model/AuthUserDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/model/AuthUserDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/model/Permission.class" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/model/Permission.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/model/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/model/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/repository/RoleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/repository/RoleRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/service/OAuth2Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/service/OAuth2Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/service/impl/OAuth2ServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/service/impl/OAuth2ServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/service/impl/UserDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/service/impl/UserDetailsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../demo-oauth2/target/classes/com/example/demooauth2/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2OaGkSONWC8iDl842u7a6DduVj9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/gialuong/Documents/Oauth/oauth2-client",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "spring.configuration.checksum": "d51789e426cfcc3a1892af91e973ead7"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Oauth2ClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="oauth2-client" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.oauth2client.Oauth2ClientApplication" />
+      <extension name="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1dec087b-aa4d-400c-afd3-e8950ff6b4bc" name="Changes" comment="" />
+      <created>1681791423163</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1681791423163</updated>
+      <workItem from="1681791424813" duration="58000" />
+      <workItem from="1681792784144" duration="16999000" />
+      <workItem from="1681873907876" duration="679000" />
+      <workItem from="1681874679727" duration="11121000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
