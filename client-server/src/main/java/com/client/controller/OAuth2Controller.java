@@ -20,6 +20,7 @@ public class OAuth2Controller {
     private static final String CLIENT_SECRET = "pin";
     private static final String REDIRECT_URI = "http://localhost:8080/oauth/callback";
     private final String REDIRECT_URL_ACCOUNT = "redirect:http://localhost:8081/oauth/authorize?client_id=mobile&response_type=code&redirect_uri=http://localhost:8080/oauth/callback&scope=WRITE";
+    private final String REDIRECT_URL_VERIFY_PASS = "redirect:http://localhost:8081/oauth/authorize?target=4&email=";
     private final String REDIRECT_URL_INFO = "redirect:http://localhost:8081/users/profile?access_token=";
     private final String REDIRECT_URL_LOGOUT_1 = "redirect:http://localhost:8081/oauth/revoke_token?access_token=";
     private final String REDIRECT_URL_LOGOUT_2 = "&refresh_token=";
@@ -60,5 +61,11 @@ public class OAuth2Controller {
     @GetMapping("/signout")
     public ModelAndView signout() {
         return new ModelAndView(REDIRECT_URL_LOGOUT_1 + accessToken + REDIRECT_URL_LOGOUT_2 + refreshToken);
+    }
+
+    @GetMapping("/changePassword")
+    public ModelAndView changePassword(@RequestParam Map<String, String> requestParam) {
+        String email = requestParam.get("email");
+        return new ModelAndView(REDIRECT_URL_VERIFY_PASS + email);
     }
 }
