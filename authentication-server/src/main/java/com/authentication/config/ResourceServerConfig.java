@@ -32,7 +32,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
                 .antMatchers("/oauth/authorize").permitAll()
                 .antMatchers("/register").permitAll()
                 .antMatchers("/forgot").permitAll()
-                .antMatchers("/verifyCode").permitAll()
+                .antMatchers("/changePassword").permitAll()
                 .anyRequest().authenticated()
                 .and().formLogin()
                 .loginPage("/account")

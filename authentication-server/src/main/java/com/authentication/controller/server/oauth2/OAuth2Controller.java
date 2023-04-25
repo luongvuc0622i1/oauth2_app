@@ -43,16 +43,24 @@ public class OAuth2Controller {
     @RequestMapping(value = "/authorize")
     public ModelAndView authorize(Map<String, Object> model, @RequestParam Map<String, String> parameters, SessionStatus sessionStatus,
                                   HttpSession session) {
-        Authentication authentication = (Authentication) session.getAttribute("authentication");
-        if (authentication == null || !authentication.isAuthenticated()) {
-            session.setAttribute("client_id", parameters.getOrDefault("client_id", null));
-            session.setAttribute("response_type", parameters.getOrDefault("response_type", null));
-            session.setAttribute("redirect_uri", parameters.getOrDefault("redirect_uri", null));
-            session.setAttribute("scope", parameters.getOrDefault("scope", null));
-            session.setAttribute("state", parameters.getOrDefault("state", null));
+        String target = parameters.get("target");
+        if (target == null || target.isEmpty()) {
+            Authentication authentication = (Authentication) session.getAttribute("authentication");
+            if (authentication == null || !authentication.isAuthenticated()) {
+                session.setAttribute("client_id", parameters.getOrDefault("client_id", null));
+                session.setAttribute("response_type", parameters.getOrDefault("response_type", null));
+                session.setAttribute("redirect_uri", parameters.getOrDefault("redirect_uri", null));
+                session.setAttribute("scope", parameters.getOrDefault("scope", null));
+                session.setAttribute("state", parameters.getOrDefault("state", null));
+                return new ModelAndView("redirect:/account");
+            }
+            return authorizationEndpoint.authorize(model, parameters, sessionStatus, authentication);
+        } else if (target.equals("4")) {
+            session.setAttribute("target", "4");
+            session.setAttribute("email", parameters.get("email"));
             return new ModelAndView("redirect:/account");
         }
-        return authorizationEndpoint.authorize(model, parameters, sessionStatus, authentication);
+        return new ModelAndView("error");
     }
 
     @RequestMapping(

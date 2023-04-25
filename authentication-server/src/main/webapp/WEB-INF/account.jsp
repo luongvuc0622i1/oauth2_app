@@ -129,6 +129,12 @@
       z-index: 2;
     }
 
+    .forgot-mail-container .forgot-pass-container {
+      left: 0;
+      width: 100%;
+      z-index: 2;
+    }
+
     .container.right-panel-active .sign-in-container {
       transform: translateX(100%);
     }
@@ -244,7 +250,7 @@
 </head>
 <body>
 <div class="container" id="container">
-  <div class="form-container sign-up-container">
+  <div class="form-container sign-up-container" id="sign-up-container">
     <form action="/register?action=submit" method="post" onsubmit="return ValidateFormRegister()" >
       <h1>Create Account</h1>
       <div class="social-container">
@@ -264,12 +270,12 @@
       <input type="password" placeholder="Confirm Password" name="confirmPassword" id="id_password2" />
       <i class="far fa-eye" id="togglePassword2" style="margin-left: 240px; cursor: pointer; margin-top: -36px"></i><br><br>
       <div>
-        <button type="reset" style="float: left; width: 140px; background-color: white; color: #FF4B2B">Reset</button>
-        <button type="submit">Sign Up</button>
+        <button type="reset" style="float: left; width: 140px; background-color: white; color: #FF4B2B; margin-right: 4px">Reset</button>
+        <button type="submit" style="float: right; width: 140px">SignUp</button>
       </div>
     </form>
   </div>
-  <div class="form-container sign-in-container">
+  <div class="form-container sign-in-container" id="sign-in-container">
     <form action="/account?action=submit" method="post" onsubmit="return ValidateFormLogin()" >
       <h1>Sign in</h1>
       <div class="social-container">
@@ -283,11 +289,11 @@
       <span id="password-validation-message" style="color: red"></span>
       <input type="password" placeholder="Password" name="password" autocomplete="current-password" required="" id="id_password" />
       <i class="far fa-eye" id="togglePassword" style="margin-left: 240px; cursor: pointer; margin-top: -36px"></i><br>
-      <a href="#">Forgot your password?</a>
+      <a id="forgot-password" href="">Forgot your password?</a>
       <button type="submit">Sign In</button>
     </form>
   </div>
-  <div class="overlay-container">
+  <div class="overlay-container" id="overlay-container">
     <div class="overlay">
       <div class="overlay-panel overlay-left">
         <h1>Welcome Back!</h1>
@@ -300,6 +306,31 @@
         <button class="ghost" id="signUp">Sign Up</button>
       </div>
     </div>
+  </div>
+  <div class="form-container forgot-mail-container" id="forgot-mail-container" style="display: none">
+    <form action="/forgot?action=submit" method="post" >
+      <h1>Forgot Password</h1>
+      <div class="social-container" style="height: 40px"></div>
+      <span>Please</span>
+      <input type="text" placeholder="Username" id="forgot-username" name="username"/>
+      <input type="email" placeholder="Email" id="forgot-email" name="email"/>
+      <div style="height: 20px"></div>
+      <button type="submit">Send email</button>
+    </form>
+  </div>
+  <div class="form-container forgot-pass-container" id="forgot-pass-container" style="display: none">
+    <form action="/changePassword?action=submit" method="post" >
+      <h1>Forgot Password</h1>
+      <div class="social-container" style="height: 40px"></div>
+      <span>Enter your new password below.</span>
+      <input type="password" placeholder="Password" name="newPassword" id="id_password3" />
+      <i class="far fa-eye" id="togglePassword3" style="margin-left: 240px; cursor: pointer; margin-top: -36px"></i><br>
+      <input type="password" placeholder="Confirm Password" name="confirmPassword" id="id_password4" />
+      <i class="far fa-eye" id="togglePassword4" style="margin-left: 240px; cursor: pointer; margin-top: -36px"></i><br><br>
+      <input type="hidden" name="email" value="<%= session.getAttribute("email") %>"/>
+      <div style="height: 20px"></div>
+      <button type="submit">Save</button>
+    </form>
   </div>
 </div>
 <script>
@@ -375,6 +406,28 @@
     }
     return true;
   };
+
+  //click forgot password
+  const forgotPassword = document.querySelector('#forgot-password');
+  forgotPassword.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById("container").style.width = "384px";
+    document.getElementById("sign-up-container").remove();
+    document.getElementById("sign-in-container").remove();
+    document.getElementById("overlay-container").remove();
+    document.getElementById("forgot-mail-container").style.display = "block";
+  });
+
+  //show form input new password
+  let target = '<%= session.getAttribute("target") %>';
+  if (target == 4) {
+    document.getElementById("container").style.width = "384px";
+    document.getElementById("sign-up-container").remove();
+    document.getElementById("sign-in-container").remove();
+    document.getElementById("overlay-container").remove();
+    document.getElementById("forgot-mail-container").remove();
+    document.getElementById("forgot-pass-container").style.display = "block";
+  }
 </script>
 </body>
 </html>

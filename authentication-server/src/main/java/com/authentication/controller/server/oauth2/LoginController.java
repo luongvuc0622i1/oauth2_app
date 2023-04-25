@@ -26,8 +26,8 @@ public class LoginController {
     private RoleRepository roleRepository;
 
     @GetMapping("/account")
-    public String account() {
-        return "account";
+    public ModelAndView account() {
+        return new ModelAndView("account");
     }
 
     @PostMapping("/register")
@@ -53,15 +53,39 @@ public class LoginController {
 
             session.setAttribute("client_id", "mobile");
             session.setAttribute("response_type", "code");
-            session.setAttribute("redirect_uri", "http://localhost:8082/oauth/callback");
+            session.setAttribute("redirect_uri", "http://localhost:8080/oauth/callback");
             session.setAttribute("scope", "WRITE");
             return "account";
         }
         return "error";
     }
 
-    @GetMapping("/forgot")
-    public ModelAndView forgot() {
-        return new ModelAndView("forgot-password");
+    @PostMapping("/forgot")
+    public ModelAndView sendMail(HttpServletRequest request){
+        String username = request.getParameter("username");
+        String email = request.getParameter("email");
+        if(!(userService.notExistEmail(email)) && !(userService.notExistUsername(username))) {
+            return new ModelAndView("redirect:http://localhost:8082/verifyCode?email="+email);
+        } else {
+            return new ModelAndView("error");
+        }
+    }
+
+    @PostMapping("/changePassword")
+    public ModelAndView changePassword(HttpServletRequest request, HttpSession session){
+        String newPassword = request.getParameter("newPassword");
+        String confirmPassword = request.getParameter("confirmPassword");
+        String email = request.getParameter("email");
+        User user = userService.findByEmail(email);
+        if((newPassword.equals(confirmPassword)) && (user != null)){
+            userService.changePassword(user, newPassword);
+
+            session.setAttribute("client_id", "mobile");
+            session.setAttribute("response_type", "code");
+            session.setAttribute("redirect_uri", "http://localhost:8080/oauth/callback");
+            session.setAttribute("scope", "WRITE");
+            return new ModelAndView("account");
+        }
+        return  new ModelAndView("error");
     }
 }
